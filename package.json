@@ -1,0 +1,55 @@
+{
+  "name": "vscode-cpp-header-sync",
+  "displayName": "Cpp Header Sync",
+  "description": "Synchronous editing of Cpp and Header file.",
+  "version": "0.1.0",
+  "publisher": "SatoshiYamamoto",
+  "author": {
+    "name": "Satoshi Yamamoto",
+    "email": "standard.software.net@gmail.com",
+    "url": "https://www.facebook.com/stndardsoftware"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/standard-software/vscode-cpp-header-sync"
+  },
+  "engines": {
+    "vscode": "^1.61.2"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "c",
+    "cpp",
+    "header"
+  ],
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onCommand:CppHeaderSync.ToHeaderFile",
+    "onCommand:CppHeaderSync.ToCppFile"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "CppHeaderSync.ToHeaderFile",
+        "title": "Cpp Header Sync : To Header File"
+      },
+      {
+        "command": "CppHeaderSync.ToCppFile",
+        "title": "Cpp Header Sync : To C/C++ File"
+      }
+    ],
+    "configuration": {}
+  },
+  "scripts": {
+    "lint": "eslint --fix ./src",
+    "pack": "vsce package && code --install-extension vscode-cpp-header-sync-0.1.0.vsix",
+    "": ""
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "vsce": "^2.7.0"
+  }
+}
